@@ -1,13 +1,13 @@
 async function listaDeProdutos (){
 
-    const conecxao = await fetch("http://localhost:3000/produtos");
+    const conecxao = await fetch("https://jsonespeto.vercel.app/produtos");
     const conecxaoConvetida = await conecxao.json()
 
     return conecxaoConvetida;
 }
 
 async function enviaProduto (nome, img, descricao, preco){
-    const conecxao = await fetch("http://localhost:3000/produtos", {
+    const conecxao = await fetch("https://jsonespeto.vercel.app/produtos", {
 
         method: "POST",
         headers: {
