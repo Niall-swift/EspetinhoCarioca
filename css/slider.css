@@ -1,0 +1,42 @@
+.pg1{
+    margin-top: 70px;
+    position: relative;
+}
+#slider {
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider img{
+    margin-top: 2rem;
+   
+    opacity: 0;
+    position: absolute;
+    border-radius: 30px;
+
+    width: 25rem;
+    height: 20rem;
+
+    object-fit: cover;
+
+    transition: opacity 10ms;
+}
+
+#slider img.selecte { 
+    opacity: 1;
+}
+
+#slidet h1.selecte {
+    opacity: 1;
+}
+
+#slider h1{
+    opacity: 0;
+    font-weight: 600;
+    font-size: 50px;
+    color: rgb(1, 1, 1);
+    position: absolute;
+
+}

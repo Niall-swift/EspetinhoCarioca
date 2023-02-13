@@ -1,0 +1,136 @@
+#page1{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33% repeat(auto-fit, nimax(100px, 1fr));
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin-top: -50px;
+}
+#page1{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.card:nth-child(3),.card:nth-child(5){
+  grid-column: 3/3;
+}
+
+.card:nth-child(2),.card:nth-child(4){
+  grid-column: 2/2;
+}
+
+.card{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-column: 1/1;
+    position: relative;
+    width: 500px;
+    height: 370px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 1.75s;
+  }
+  .card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d83133;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+  }
+  .card:hover .circle::before{
+    background: #0065c3;
+    clip-path: circle(400px at center);
+  }
+  .card img{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.75s;
+  }
+  .card:hover img{
+    left: 74%;
+    height: 400px;
+  }
+  .card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 5px;
+  }
+  .card .content h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .card .content p{
+    color: #fff;
+  }
+  .card .content .addProductToCart{
+    position: relative;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: #fff;
+    color: #000000;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+  }
+  .card .content .addProductToCart:active{
+    box-shadow: 0 1px 20px 15px rgb(202, 46, 40);
+  }
+  .titulo__1{
+    background: url(https://64.media.tumblr.com/e09e47a9c3b5670c9f9c0c07cb2b31cf/d4962fef96058a6f-ad/s500x750/8d3f79df14764cd9a9e90d4cc039ede01df7a99b.gif) center/cover;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    width: 100%;
+    height: 60px;
+    margin-top: 2rem;
+  }
+  .titulo_1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+  }

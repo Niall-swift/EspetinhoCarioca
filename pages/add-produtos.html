@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/add-produtos.css">
+    <title>add-produtos</title>
+</head>
+<header>
+
+</header>
+<body>
+
+    <form class="container__formulario" data-formulario>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="url">Nome do produto</label>
+                <input name="text" class="campo__escrita" required
+                    placeholder="Por exemplo: https://www.youtube.com/embed/FAY1K2aUg5g" id='url' data-nome/>
+            </div>
+
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="titulo">imagem do produto</label>
+                <input name="url" class="campo__escrita" required placeholder="Neste campo, dê o nome do vídeo"
+                    id='titulo' data-img/>
+            </div>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="imagem">descrição do produto</label>
+                <input name="text" class="campo__escrita" required placeholder="Insira a url da imagem"
+                    id='imagem' data-descricao/>
+            </div>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="imagem">preço do produto</label>
+                <input type="number" name="number" class="campo__escrita" required placeholder="Insira a url da imagem"
+                    id='imagem' data-preco/>
+            </div>
+
+            <input class="formulario__botao" type="submit" />
+    </form>
+    
+    <script src="../js/envia-produtos.js" type="module"></script>
+</body>
+</html>

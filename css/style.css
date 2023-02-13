@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Azeret Mono', monoespacial;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
+}
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(21, 21, 21);
+}
+
