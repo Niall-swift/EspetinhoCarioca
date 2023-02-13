@@ -1,13 +1,13 @@
 async function listaDeProdutos (){
 
-    const conecxao = await fetch("https://meek-syrniki-508473.netlify.app/db.json");
+    const conecxao = await fetch("https://stupendous-swan-1ee694.netlify.app/db.json");
     const conecxaoConvetida = await conecxao.json()
 
     return conecxaoConvetida;
 }
 
 async function enviaProduto (nome, img, descricao, preco){
-    const conecxao = await fetch("https://meek-syrniki-508473.netlify.app/db.json", {
+    const conecxao = await fetch("https://stupendous-swan-1ee694.netlify.app/db.json", {
 
         method: "POST",
         headers: {
