@@ -1,0 +1,22 @@
+.formpedidos{
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+}
+
+.inputdados input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    background: #ffffffb2;
+    border: none;
+}
+
+.bandeira{
+    border-radius: 30px;
+}
+.bandeira option{
+    border-radius: 30px;   
+}
