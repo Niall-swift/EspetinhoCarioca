@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/carrinhodecompra.css">
+    <link rel="stylesheet" href="./css/formpedido.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Espetinho-Carioca</title>
+    <title>Espetinho Carioca</title>
 </head>
 <body>
   <header>
@@ -46,13 +47,50 @@
             <tr>
               <td colspan="3" class="cart-total-container">
                 <strong>Total</strong>
-                <span class="valor">R$0,00</span>
+                <span class="cart-product-price">R$0,00</span>
               </td>
             </tr>
           </tfoot>
         </table>
-      
-        <button type="button" class="purchase-button">Finalizar Compra</button>
+        <form class ="formpedidos" action="./pages/obs.html" method="get">
+          <div class="dados">
+
+            <div class="inputdados">
+              <input type="text" class="dadoscriente" id="nome" placeholder="seu nome completo">
+            </div>
+
+            <div class="inputdados">
+              <input type="text" class="dadoscriente" id="numero" placeholder="seu numero de telefone">
+            </div>
+
+            <div class="inputdados">
+              <input type="text" class="dadoscriente" id="endereco" placeholder="seu endereço/Bairo">
+            </div>
+
+            <div class="inputdados">
+              <input type="text" class="dadoscriente" id="numerodacasa" placeholder="número da casa e referencia ">
+            </div>
+
+            <div class="inputdados">
+              <input type="text" class="dadoscriente" id="obs" placeholder="observação">
+            </div>
+
+            <div class="inputdados">
+              <div class="cartoes">
+                <label for="">Qual e a bandeira do seu cartão </label>
+                <select class="bandeira" id="seleçaodebandeira">
+  
+                  <option>mastercard / Debito</option>
+                  <option>Visa / electron</option>
+                  <option>american express</option>
+                  <option>Pix</option>
+        </select>
+              </div>
+             
+            </div>
+          </div>
+        </form>
+        <button id="submit" type="submit" class="btn btn-primary">Finalizar compra</button>
       </section>
       </main>
 
