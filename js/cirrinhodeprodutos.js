@@ -1,3 +1,6 @@
+import { conectaApi } from "./conectaApi.js";
+
+
 if (document.readyState == 'loading') {
    document.addEventListener('DOMContentLoaded', ready)
  } else {
@@ -56,7 +59,7 @@ function updateTotal () {
 
  totalProdutos = totalProdutos.toFixed(2)
  totalProdutos = totalProdutos.replace(".", ",")
- document.querySelector(".cart-total-container .valor").innerText = "R$" + totalProdutos;
+ document.querySelector(".cart-total-container .cart-product-price").innerText = "R$" + totalProdutos;
 
 
 
@@ -69,8 +72,7 @@ function updateTotal () {
       const produtos = add.parentElement.parentElement
       const produtoimg = produtos.getElementsByClassName("imagemdoproduto")[0].src
       const produtonome = produtos.getElementsByClassName("nomedoproduto")[0].innerText
-      const produtovalor = produtos.getElementsByClassName("valordoproduto")[0].innerText
-  
+      const produtovalor = produtos.getElementsByClassName("cart-product-price")[0].innerText
      let produtonocarrinho = document.createElement("tr");
      produtonocarrinho.classList.add("cart-product")
      
@@ -103,4 +105,42 @@ export const carrinho = {
    updateTotal
 };
 
+document.querySelector('#submit').addEventListener('click' , function (){
+   let itemnome = document.getElementsByClassName("cart-product");
+   for ( var i = 0; i < itemnome.length; i++){
 
+
+      let nomedointem = itemnome[i].getElementsByClassName("cart-product-title")[0].innerText
+      
+
+
+      console.log("nomedointem")
+   
+
+
+
+   let nomes = document.querySelector('#nome').value;
+   let numero =  document.querySelector('#numero').value;
+   let endereco = document.querySelector('#endereco').value;
+   let numerocasa = document.querySelector('#numerodacasa').value;
+   let bandeira = document.querySelector('#seleçaodebandeira').value;
+   let valor = document.getElementsByClassName(".cart-product-price").innerText;
+    console.log(valor)
+
+
+   let url = "https://api.whatsapp.com/send?phone=5521980501851&text= Bem vindo ao Espetinho carioca -->> %0A%0A Nome do cliente %0A%0A " + nomes + " %0A%0A Numero de Telefone ?%0A%0A"+ 
+   numero + "%0A%0A Endereço do cliente %0A%0A "+ endereco +" %0A%0A Numero e complemento da casa ? %0A"+ numerocasa +"%0A Bandeira do cartão ? %0A%0A" + bandeira + "%0A%0A items %0A%0A" + nomedointem + "  %0A%0A valor total %0A%0A" + valor; 
+
+   window.open(url);
+
+   }
+
+
+
+  const pedidos = document.querySelector("#msg");
+  pedidos.appendChild(nomedointem).innerText
+
+  console.log(pedidos)
+
+});
+ 
