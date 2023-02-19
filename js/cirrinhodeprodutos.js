@@ -134,13 +134,5 @@ document.querySelector('#submit').addEventListener('click' , function (){
    window.open(url);
 
    }
-
-
-
-  const pedidos = document.querySelector("#msg");
-  pedidos.appendChild(nomedointem).innerText
-
-  console.log(pedidos)
-
 });
  
