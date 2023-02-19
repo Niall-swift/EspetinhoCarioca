@@ -1,6 +1,6 @@
 import { carrinho } from "../js/cirrinhodeprodutos.js";
 
-console.log(carrinho)
+
 import { conectaApi } from "./conectaApi.js";
 
  const produto = document.querySelector("[data-card]");
@@ -13,7 +13,7 @@ import { conectaApi } from "./conectaApi.js";
     <div class="content">
       <h2 class="nomedoproduto">${nome}</h2>
       <h3>${descricao}</h3>
-      <p class="valordoproduto">${preco}</p>
+      <p class="cart-product-price">${preco}</p>
       <button type="button" class="addProductToCart">compra</button>
     </div>
     <img class="imagemdoproduto" src="${img}" alt="">
@@ -27,6 +27,7 @@ import { conectaApi } from "./conectaApi.js";
         botaoaddcarinho[i].addEventListener("click", carrinho.addcarinho);
         
     }
+    
     return produtos;
 
     
@@ -38,5 +39,8 @@ import { conectaApi } from "./conectaApi.js";
         criaProduto (elemento.nome, elemento.img, elemento.descricao, elemento.preco)))
         
     };
+   
 
  listaDeProduto();
+
+
